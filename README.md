@@ -1,9 +1,11 @@
 # Personalized Learning Experience App
 
 ## Overview
+
 This Android application provides personalized learning experiences, adaptive assessments, and intelligent tutoring based on student interests. The app integrates with a backend API that uses Large Language Models (LLMs) to generate quiz questions tailored to the user's selected topics of interest.
 
 ## Features
+
 - **User Authentication**: Login and registration system with secure password handling
 - **Interest Selection**: Users can select up to 10 topics of interest during account setup
 - **Personalized Dashboard**: Displays tasks generated based on user interests
@@ -14,20 +16,25 @@ This Android application provides personalized learning experiences, adaptive as
 ## Technical Implementation
 
 ### Architecture
+
 - **Frontend**: Android (Java) with Room Database for local storage
 - **Backend**: Python Flask API with Hugging Face LLM integration
 - **Network**: Volley for API communication
 
 ### Components
+
 1. **User Management**:
+
    - Room Database for storing user credentials and preferences
    - SessionManager for handling login state
 
 2. **Interest Management**:
+
    - Selection UI with toggleable buttons
    - Database storage of user interests
 
 3. **Task Generation**:
+
    - Tasks are created based on user interests
    - Stored locally for offline access
 
@@ -39,6 +46,7 @@ This Android application provides personalized learning experiences, adaptive as
 ## Setup Instructions
 
 ### Backend Setup
+
 1. Navigate to the `BackendApiLLM` directory
 2. Create a virtual environment: `python -m venv venv`
 3. Activate the virtual environment:
@@ -49,18 +57,21 @@ This Android application provides personalized learning experiences, adaptive as
 6. Run the server: `python main.py`
 
 ### Android App Setup
+
 1. Open the project in Android Studio
 2. Build and run the application on an emulator or physical device
 3. For emulator testing, the backend API is configured to connect to `10.0.2.2:4000`
 4. For physical device testing, update the `BASE_URL` in `ApiClient.java` to your computer's IP address
 
 ## Project Structure
+
 - `models/`: Data models and Room Database components
 - `utils/`: Utility classes for API communication and session management
 - `adapters/`: RecyclerView adapters
 - Activities for each screen in the application flow
 
 ## Future Enhancements
+
 - Add more personalization options
 - Implement advanced analytics for learning progress
 - Add support for different question types

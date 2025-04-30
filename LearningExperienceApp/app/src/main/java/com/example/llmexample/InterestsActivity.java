@@ -58,6 +58,12 @@ public class InterestsActivity extends AppCompatActivity {
 
         // Set up click listeners for all interest buttons
         for (Button button : interestButtons) {
+            // Initialize all buttons with unselected style
+            button.setBackgroundResource(R.drawable.interest_button_unselected);
+            button.setTextColor(getResources().getColor(R.color.white, null));
+            button.setAlpha(0.8f);
+            button.setElevation(0f);
+            
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -81,24 +87,29 @@ public class InterestsActivity extends AppCompatActivity {
 
     private void toggleInterestSelection(Button button) {
         String interest = button.getText().toString();
-        
+
         if (selectedInterests.contains(interest)) {
-            // Deselect interest
             selectedInterests.remove(interest);
-            button.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
+            button.setBackgroundResource(R.drawable.interest_button_unselected);
+            button.setTextColor(getResources().getColor(R.color.white, null));
+            button.setAlpha(0.8f);
+
         } else {
-            // Check if max interests reached
             if (selectedInterests.size() >= 10) {
                 Toast.makeText(this, "You can select maximum 10 interests", Toast.LENGTH_SHORT).show();
                 return;
             }
-            
-            // Select interest
-            selectedInterests.add(interest);
-            button.setBackgroundColor(getResources().getColor(android.R.color.holo_green_light));
-        }
-    }
 
+            selectedInterests.add(interest);
+            button.setBackgroundResource(R.drawable.interest_button_selected);
+            button.setTextColor(getResources().getColor(R.color.white, null));
+            button.setAlpha(1.0f);
+            button.setElevation(8f);
+        }
+
+        // Provide haptic feedback
+        button.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+    }
     private void saveUserInterests() {
         final String username = sessionManager.getUsername();
         

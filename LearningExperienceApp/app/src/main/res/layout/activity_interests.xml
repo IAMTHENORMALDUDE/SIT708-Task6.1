@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="@color/background"
     android:padding="16dp">
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Your\nInterests"
-        android:textColor="#000000"
+        android:textColor="@color/text_primary"
         android:textSize="32sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:layout_below="@id/interestsTitle"
         android:layout_marginTop="8dp"
         android:text="You may select up to 10 topics"
-        android:textColor="#000000"
+        android:textColor="@color/text_secondary"
         android:textSize="16sp" />
 
     <ScrollView
@@ -53,8 +53,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Algorithms" />
 
                 <Button
@@ -63,8 +66,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Data Structures" />
             </LinearLayout>
 
@@ -80,8 +86,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Web Development" />
 
                 <Button
@@ -90,8 +99,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Testing" />
             </LinearLayout>
 
@@ -107,8 +119,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Mobile Development" />
 
                 <Button
@@ -117,8 +132,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Artificial Intelligence" />
             </LinearLayout>
 
@@ -134,8 +152,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Databases" />
 
                 <Button
@@ -144,8 +165,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Networking" />
             </LinearLayout>
 
@@ -161,8 +185,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Security" />
 
                 <Button
@@ -171,8 +198,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="4dp"
-                    android:background="#2196F3"
+                    android:background="@drawable/interest_button_unselected"
                     android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:elevation="4dp"
                     android:text="Cloud Computing" />
             </LinearLayout>
         </LinearLayout>
@@ -183,9 +213,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@android:color/holo_green_light"
+        android:background="@drawable/next_button_background"
         android:text="Next"
-        android:textColor="@android:color/white"
-        android:padding="12dp" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:elevation="8dp" />
 
 </RelativeLayout>

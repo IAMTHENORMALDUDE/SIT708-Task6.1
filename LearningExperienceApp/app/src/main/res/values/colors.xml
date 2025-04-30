@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- App theme colors - Modern dark teal palette -->
+    <color name="primary">#00897B</color> <!-- Teal 600 -->
+    <color name="primary_dark">#00695C</color> <!-- Teal 800 -->
+    <color name="accent">#FF6E40</color> <!-- Deep Orange A200 -->
+    <color name="background">#FAFAFA</color> <!-- Light neutral background -->
+
+    <!-- UI element colors -->
+    <color name="button_selected">#00897B</color> <!-- Same as primary for consistency -->
+    <color name="button_unselected">#B2DFDB</color> <!-- Teal 100 - light teal -->
+    <color name="text_primary">#212121</color> <!-- Dark gray for primary text -->
+    <color name="text_secondary">#757575</color> <!-- Medium gray for secondary text -->
+    <color name="divider">#E0E0E0</color> <!-- Gray 300 for subtle dividers -->
+    <color name="error">#D32F2F</color> <!-- Red 700 for errors -->
 </resources>
