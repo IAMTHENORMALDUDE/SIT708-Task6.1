@@ -53,6 +53,26 @@
             android:name=".ResultsActivity"
             android:exported="false" />
             
+        <!-- Profile Activity -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+            
+        <!-- History Activity -->
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+            
+        <!-- Upgrade Activity -->
+        <activity
+            android:name=".UpgradeActivity"
+            android:exported="false" />
+            
+        <!-- Payment Activity -->
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+            
         <!-- Original MainActivity (kept for reference) -->
         <activity
             android:name=".MainActivity"

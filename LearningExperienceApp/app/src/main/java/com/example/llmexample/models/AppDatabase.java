@@ -6,7 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {User.class, UserInterest.class, Task.class}, version = 1, exportSchema = false)
+@Database(entities = {User.class, UserInterest.class, Task.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "learning_experience_db";
     private static AppDatabase instance;

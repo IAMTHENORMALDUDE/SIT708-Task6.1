@@ -3,6 +3,8 @@ package com.example.llmexample;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -28,6 +30,7 @@ public class DashboardActivity extends AppCompatActivity implements TaskAdapter.
     private TextView greetingText, taskCountText;
     private RecyclerView tasksRecyclerView;
     private ProgressBar loadingIndicator;
+    private Button profileButton, historyButton, upgradeButton;
     private TaskAdapter taskAdapter;
     private List<Task> taskList;
     private AppDatabase database;
@@ -60,10 +63,29 @@ public class DashboardActivity extends AppCompatActivity implements TaskAdapter.
         taskCountText = findViewById(R.id.taskCountText);
         tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
         loadingIndicator = findViewById(R.id.loadingIndicator);
+        profileButton = findViewById(R.id.profileButton);
+        historyButton = findViewById(R.id.historyButton);
+        upgradeButton = findViewById(R.id.upgradeButton);
 
         // Set greeting text
         String username = sessionManager.getUsername();
         greetingText.setText("Hello,\n" + username);
+        
+        // Set up navigation button click listeners
+        profileButton.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+        
+        historyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, HistoryActivity.class);
+            startActivity(intent);
+        });
+        
+        upgradeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, UpgradeActivity.class);
+            startActivity(intent);
+        });
 
         // Initialize RecyclerView
         taskList = new ArrayList<>();
